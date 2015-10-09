@@ -17,3 +17,7 @@
 - Quick Trigger on Stack Overflow: A Study of Gamification-influenced Member Tendencies
 
 - Stack Overflow Badges and User Behavior: An Econometric Approach
+
+- Gamification of Education: A Review of Literature
+
+- Building Reputation in StackOverflow:An Empirical Investigation
