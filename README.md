@@ -1,5 +1,5 @@
 # CSCW_Project
-Name of the Team : High-fives
+Name of the Team : The High-fivers
 
 Group Members:
 
