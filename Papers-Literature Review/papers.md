@@ -10,15 +10,15 @@
 
 - Can Gamification Motivate Voluntary Contributions? The Case of StackOverflow Q&A Community (Arturo)
 
-- Gamification for Productive Interaction
+- Gamification for Productive Interaction (Tim Baker)
 
-- Incentives, Gamification, and Game Theory: An Economic Approach to Badge Design
+- Incentives, Gamification, and Game Theory: An Economic Approach to Badge Design (Tim Baker)
 
 - Quick Trigger on Stack Overflow: A Study of Gamification-influenced Member Tendencies (Arturo)
 
 - Stack Overflow Badges and User Behavior: An Econometric Approach (Nitin)
 
-- Gamification of Education: A Review of Literature
+- Gamification of Education: A Review of Literature 
 
 - Building Reputation in StackOverflow:An Empirical Investigation (Nitin)
 
