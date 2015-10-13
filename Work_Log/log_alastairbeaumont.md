@@ -7,3 +7,8 @@ CSCW Project - Fall 2015
 | ----- |:-----------:|
 | Project Brainstorm Meeting (Friday) | 1.5 |
 
+## Week 1 (2015/10/05 - 2015/10/09)
+| Tasks | Hours Spent |
+| ----- |:-----------:|
+| Read Articles | 1.0 |
+| Wrote my part for Proposal | 1.0 |
