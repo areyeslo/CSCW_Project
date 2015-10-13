@@ -18,7 +18,7 @@
 
 - Stack Overflow Badges and User Behavior: An Econometric Approach (Nitin)
 
-- Gamification of Education: A Review of Literature 
+- Gamification of Education: A Review of Literature (Alastair)
 
 - Building Reputation in StackOverflow:An Empirical Investigation (Nitin)
 
