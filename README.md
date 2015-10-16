@@ -1,5 +1,5 @@
-# CSCW_Project
-Name of the Team : The High-fivers
+# Extending StackOverflow Gamification using Social Media
+Team Name : The High-fivers
 
 Group Members:
 
