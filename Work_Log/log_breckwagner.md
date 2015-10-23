@@ -17,3 +17,12 @@ CSCW Project - Fall 2015
 | Project Meeting | 1.0 |
 | Missed Friday Meeting (2015.10.16) | 0.0 |
 | ... | ... |
+
+## Week 2 (2015.10.11 - 2015.10.17)
+
+
+
+## Week 3 (2015.10.18 - 2015.10.24)
+| Tasks | Hours Spent |
+| ----- |:-----------:|
+| Project Meeting (2015-10-22) | 2.5 |
