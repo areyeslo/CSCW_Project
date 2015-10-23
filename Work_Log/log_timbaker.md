@@ -13,7 +13,7 @@ CSCW Project - Fall 2015
 | ----- |:-----------:|
 | Reading Literature | 1.5 |
 | Writing portion for proposal | 1.0 |
-| Meeting to create presentation and discuss proposal | 1.0 |
+| Meeting to create presentation and discuss proposal | 2.0 |
 
 ## Week 2 (2015.10.10 - 2015.10.17)
 | Tasks | Hours Spent |
