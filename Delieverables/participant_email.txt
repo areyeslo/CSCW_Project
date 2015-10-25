@@ -1,0 +1,16 @@
+{EMAIL_ADDRESS}
+
+
+
+Subject: Participate in University of Victoria
+
+
+
+I am writing to you to request your participation in a brief survey (5-10 minutes max). You have been selected from a pool of individuals from the StackOverflow website. The purpose of this study is to try to understance how gamification effects users motivation to post both questions and answers on stack overflow. This could help to understand how site elements could be used to better the quolity of both answers and questions.
+
+Survey Link: http://goo.gl/forms/XqmJZhHKF1
+
+Your participation in the survey is completely voluntary and all of your responses will be kept confidential. This survay has been designed and complies with the TCPS polocy and therefor, "potential participants can reasonably expect to regard the possible harms implied by participation to be no greater than those encountered by the participant in those aspects of [their] everyday life that relate to the research." No personally identifiable information will be associated with your responses to any reports of these data and at any time if you do wish to withdraw you may even after submitting approval for inclusion in the study. 
+
+The University of Victoria Human Research Ethics Board has approved this survey. Should you have any comments or questions, please feel free to 
+contact me at {EMAIL_ADDRESS}.
