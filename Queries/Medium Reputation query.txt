@@ -5,5 +5,5 @@ SELECT
 From 
   Users 
 Where 
-  Reputation < 100000 and Reputation > 10000
+  Reputation > 10000 and Reputation < 50000
 Order by Reputation DESC

@@ -1,9 +1,9 @@
---All Users in Low Reputation Bracket 5000+ Reputation
+--All Users in Low Reputation Bracket 50+ Reputation
 SELECT 
   Id as [User Link], 
   Reputation 
 From 
   Users 
 Where 
-  Reputation > 5000 and Reputation < 10000
+  Reputation > 50 and Reputation < 52
 Order by Reputation DESC
