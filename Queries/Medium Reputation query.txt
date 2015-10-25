@@ -1,0 +1,9 @@
+--All Users in Medium Reputation Bracket 10000+ Reputation
+SELECT 
+  Id as [User Link], 
+  Reputation 
+From 
+  Users 
+Where 
+  Reputation > 10000 and Reputation < 50000
+Order by Reputation DESC

@@ -1,0 +1,9 @@
+--All Users in High Reputation Bracket 100000+ Reputation
+SELECT 
+  Id as [User Link], 
+  Reputation 
+From 
+  Users 
+Where 
+  Reputation > 100000
+Order by Reputation DESC
