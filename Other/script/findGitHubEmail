@@ -49,12 +49,13 @@ if [ "$1" == "-e" ] || [ "$1" == "-g" ] ; then
     exit
   fi
 
+  TOKEN = "?access_token=e306acd6925b12530f9f811556e29025d246f6f0"
   USER=$2
-  EVENTRESPONSE=`curl -s https://api.github.com/users/$USER/events/public`
+  EVENTRESPONSE=`curl -s https://api.github.com/users/$USER/events/public$TOKEN`
   EMAILS=`echo "$EVENTRESPONSE" | grep "\"email\":" | sed -e's/[,|"]//g' | sort | uniq -c | sort -n | awk '{print $(NF)}' | grep -v null`
   
   if [ "$1" == "-g" ] ; then
-    PROFILERESPONSE=`curl -s https://api.github.com/users/$USER`
+    PROFILERESPONSE=`curl -s https://api.github.com/users/$USER$TOKEN`
     GID=`echo "$PROFILERESPONSE" | grep "\"gravatar_id\":" | sed -e's/[,|"]//g' | awk '{print $(NF)}'`
     for EMAIL in $EMAILS ; do
       if [ $GID == `_md5 $EMAIL` ] ; then
@@ -70,11 +71,11 @@ if [ "$1" == "-e" ] || [ "$1" == "-g" ] ; then
 fi
 
 USER=$1
-PROFILERESPONSE=`curl -s https://api.github.com/users/$USER`
+PROFILERESPONSE=`curl -s https://api.github.com/users/$USER$TOKEN`
 EMAIL=`echo "$PROFILERESPONSE" | grep "\"email\":" | sed -e's/[,|"]//g' | awk '{print $(NF)}' | grep -v null`
 
 if [ -z "$EMAIL" ] ; then
-  EVENTRESPONSE=`curl -s https://api.github.com/users/$USER/events/public`
+  EVENTRESPONSE=`curl -s https://api.github.com/users/$USER/events/public$TOKEN`
   EMAIL=`echo "$EVENTRESPONSE" | grep "\"email\":" | sed -e's/[,|"]//g' | sort | uniq -c | sort -n | awk '{print $(NF)}' | grep -v null | tail -n1`
 fi
 
