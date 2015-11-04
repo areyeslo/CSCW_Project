@@ -6,6 +6,8 @@ import stem.process
 
 from stem.util import term
 
+from find_github_email import *
+
 SOCKS_PORT = 7000
 
 
@@ -51,4 +53,7 @@ tor_process = stem.process.launch_tor_with_config(
 print("\nChecking our endpoint:\n")
 email = json.loads(query("https://api.github.com/users/zir").decode("utf-8"))
 print(email)
+
+extractaddress("breckwagner", )
+
 tor_process.kill()  # stops tor
