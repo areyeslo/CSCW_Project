@@ -22,19 +22,28 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-import csv, random, sys, argparse
+import sys
+import csv
+import argparse
+import github_email
+import time
+import random
+import math
 
-def shuffle_rows(inputfile, outputfile, options={"preserve-header":False}):
-	with open(inputfile) as ifile:
-		r = csv.reader(ifile)
-		header = next(r) if (options["preserve-header"]) else None
-		l = list(r)
-		random.shuffle(l)
 
-	with open(outputfile, "w") as ofile:
-		writer = csv.writer(ofile, delimiter=',')
-		if header != None: writer.writerow(header)
-		writer.writerows(l)
+def read(input_file):
+    csv_list = []
+    with open(input_file, newline='') as csvfile:
+        reader = csv.reader(csvfile, delimiter=',', quotechar='"')
+        for row in reader:
+            csv_list.append(row)
+    return csv_list
+
+
+def write(outputfile, output):
+    with open(outputfile, 'a', newline='') as fp:
+        writer = csv.writer(fp, delimiter=',')
+        writer.writerows(output)
 
 
 #    ##     ##    ###    ######## ##     ##
@@ -44,31 +53,24 @@ def shuffle_rows(inputfile, outputfile, options={"preserve-header":False}):
 #    ##  #  ## ##     ##    ##    ##   ####
 #    ##     ## ##     ##    ##    ##    ###
 #    ##     ## ##     ## ######## ##     ##
-################################################################################
-
-def main(argv):
-	parser = argparse.ArgumentParser(description="""Shuffles the rows of a CSV
-		file""")
-
-	parser.add_argument("input",nargs=1, help="""The input file""")
-
-	parser.add_argument("output",nargs=1, help="""The output file""")
-
-	parser.add_argument('--header', dest='header', action='store_true',
-		help="""If present, the first row will not be shuffled""")
-	parser.add_argument('--no-header', dest='header', action='store_false',
-		help="""If present, the first row will be shuffled""")
-	parser.set_defaults(header=False)
-
+##########################################################################
+"""
+def main(args=None):
+	parser = argparse.ArgumentParser(description="Retrieve...)
+	parser.add_argument("input", nargs=1, help="The input file")
+	parser.add_argument("output", nargs=1, help="The output file)
 	args = parser.parse_args()
-	options = {
-		"preserve-header" : args.header
-	}
-
-	shuffle_rows(args.input[0],args.output[0], options)
-
-
-
-
+    print(argz.input[0])
+    ret = read(args.input[0])
+    for item in ret:
+        item.append(github_email.get_github_email(item[2]))
+    write(args.output[0], ret)
+"""
 if __name__ == "__main__":
-	main(sys.argv[1:])
+    # main()
+    ret = read("output_users_0-9.csv")
+    for item in ret:
+        time.sleep(math.fabs(random.gauss(1, 0.5)))
+        print(item[2]+".")
+        item.append(github_email.get_github_email(item[2]))
+    write("list_0-9.csv", ret)

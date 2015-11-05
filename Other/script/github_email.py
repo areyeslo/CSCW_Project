@@ -22,19 +22,34 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-import csv, random, sys, argparse
+import sys
+import requests
+import argparse
+import json
+import deep_search
 
-def shuffle_rows(inputfile, outputfile, options={"preserve-header":False}):
-	with open(inputfile) as ifile:
-		r = csv.reader(ifile)
-		header = next(r) if (options["preserve-header"]) else None
-		l = list(r)
-		random.shuffle(l)
+def get_github_email(username):
+    """Search for a users email address associated with their GitHub account.
 
-	with open(outputfile, "w") as ofile:
-		writer = csv.writer(ofile, delimiter=',')
-		if header != None: writer.writerow(header)
-		writer.writerows(l)
+    Args:
+            username (str): The username to search against.
+
+    Returns:
+            str: The email address associated with the GitHub account.
+    """
+    ACCESS_TOKEN = "YOUR TOKEN HERE"
+    request_list = [
+        'https://api.github.com/users/' + username +
+        '?access_token=' + ACCESS_TOKEN,
+        'https://api.github.com/users/' + username +
+		'/events/public?access_token=' + ACCESS_TOKEN]
+
+    for url in request_list:
+        request = requests.get(url)
+        data = json.loads(request.text)
+        result = deep_search.search(data, "email")
+        if result != ("" or None):
+            return result
 
 
 #    ##     ##    ###    ######## ##     ##
@@ -44,31 +59,18 @@ def shuffle_rows(inputfile, outputfile, options={"preserve-header":False}):
 #    ##  #  ## ##     ##    ##    ##   ####
 #    ##     ## ##     ##    ##    ##    ###
 #    ##     ## ##     ## ######## ##     ##
-################################################################################
+##########################################################################
 
-def main(argv):
-	parser = argparse.ArgumentParser(description="""Shuffles the rows of a CSV
-		file""")
+def main(args=None):
+    parser = argparse.ArgumentParser(description="""Search for a users email
+		address associated with their GitHub account.""")
 
-	parser.add_argument("input",nargs=1, help="""The input file""")
+    parser.add_argument("username", nargs=1, help="""The username to search
+		against.""")
 
-	parser.add_argument("output",nargs=1, help="""The output file""")
+    args = parser.parse_args()
 
-	parser.add_argument('--header', dest='header', action='store_true',
-		help="""If present, the first row will not be shuffled""")
-	parser.add_argument('--no-header', dest='header', action='store_false',
-		help="""If present, the first row will be shuffled""")
-	parser.set_defaults(header=False)
-
-	args = parser.parse_args()
-	options = {
-		"preserve-header" : args.header
-	}
-
-	shuffle_rows(args.input[0],args.output[0], options)
-
-
-
+    print (get_github_email(args.username[0]))
 
 if __name__ == "__main__":
-	main(sys.argv[1:])
+    main()
