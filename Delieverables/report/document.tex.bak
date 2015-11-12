@@ -121,10 +121,13 @@ StackOverflow.
   classifiers. This section is required.}{}{}
 
 \section{Introduction}
-In Social Media, the use of game design and game elements, well known as gamification, has sought to increase generation of content by the users. Badges, privileges and reputation are being used to recognize contributions of users on the sites and generally these elements seem to be valued by users who compete for the prize. Several studies have shown awareness of other participants and competence during the game experiences\cite{Rughinis}. Other studies have shown that gamification can increase engagement in activities that involve a community \cite{Marder}. However, the inclusion of gamification itself does not guaranty engagement or motivation and it depends on the rules to earn badges and privileges  according to the context\cite{Deterding}.
+In Social Media, the use of game design and game elements, well known as gamification, has sought to increase generation of content by the users. Badges, privileges and reputation are being used to recognize contributions of users on the sites and generally these elements seem to be valued by users who compete for the prize. Several studies have shown awareness of other participants and competence during the game experiences\cite{}. Other studies have shown that gamification can increase engagement in activities that involve a community[7]. However, the inclusion of gamification itself does not guaranty engagement or motivation and it depends on the rules to earn badges and privileges  according to the context[5].
+
 StackOverflow is a popular Q&A website for an ever-increasing range of computer programming topics. SO is likely to be the most popular website in the computer programming world with over 4,000,000 registered users and with more than 11,000,000 questions. The website serves as a platform for users to both ask questions related to programming and to answer the questions of other users. These contributions by the users are the heart of the content and are met with reputation points and “badges” for the user. What we hope to uncover is whether this use of gamification is the primary motivating factor for the user’s collaboration and if so, is it possible to improve the current system in order to foster an increase in collaboration by users that wouldn’t normally contribute? 
 This research aims to examine the ways that collaboration, in the form of asking and answering questions and commenting on the questions, is achieved in SO and what changes can be made to encourage this kind of collaboration from more users and to promote an increase in contributions from users of all skill levels. 
 Throughout the course of this research, we will present an overview of relevant, related work, examine what the primary motivating factors are for user collaboration, discuss the merits and shortcomings of the current system, and provide our recommendations of how StackOverflow may be improved to encourage more active participation from a wider range of its users. 
+
+
 
 \section{Related work}
 StackOverflow has been heavily studied in recent years. The following papers
@@ -316,9 +319,6 @@ Hamari, Juho, Jonna Koivisto, and Harri Sarsa. "Does gamification work?--a liter
 
 \bibitem{Rughinis}
 Rughinis, Razvan. "Gamification for productive interaction: Reading and working with the gamification debate in education." Information Systems and Technologies (CISTI), 2013 8th Iberian Conference on. IEEE, 2013.
-
-\bibitem{Ryan}
-Ryan, Richard M., C. Scott Rigby, and Andrew Przybylski. "The motivational pull of video games: A self-determination theory approach." Motivation and emotion 30.4 (2006): 344-360.
 
 \bibitem{Slag}
 Slag, Rogier, Mike de Waard, and Alberto Bacchelli. "One-day flies on StackOverflow."

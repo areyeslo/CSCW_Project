@@ -1,0 +1,330 @@
+\documentclass{sigchi}
+
+% Use this command to override the default ACM copyright statement
+% (e.g. for preprints).  Consult the conference website for the
+% camera-ready copyright statement.
+
+
+%% BEGIN -- OVERRIDE THE DEFAULT COPYRIGHT STRIP
+\toappear{
+    This work is licensed under the Creative Commons Attribution-ShareAlike
+    4.0 International License. To view a copy of this license, visit\\
+    {\url{http://creativecommons.org/licenses/by-sa/4.0/}}.
+    {Copyright \copyright~2015 Authors}}
+%% END -- OVERRIDE THE DEFAULT COPYRIGHT STRIP
+
+
+% Arabic page numbers for submission.  Remove this line to eliminate
+% page numbers for the camera ready copy
+
+%\pagenumbering{arabic}
+
+% Load basic packages
+\usepackage{balance}  % to better equalize the last page
+\usepackage{graphics} % for EPS, load graphicx instead
+%\usepackage[T1]{fontenc}
+\usepackage{txfonts}
+\usepackage{times}    % comment if you want LaTeX's default font
+\usepackage[pdftex]{hyperref}
+% \usepackage{url}      % llt: nicely formatted URLs
+\usepackage{color}
+\usepackage{textcomp}
+\usepackage{booktabs}
+\usepackage{ccicons}
+\usepackage{todonotes}
+\usepackage{footnote}
+
+\usepackage{mathptmx,helvet,courier}  \usepackage{array}
+\usepackage{ragged2e}
+\usepackage{tabularx,ragged2e,booktabs,caption}
+\newcolumntype{C}[1]{>{\Centering}m{#1}}
+\renewcommand\tabularxcolumn[1]{C{#1}}
+\usepackage{tablefootnote}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+
+% llt: Define a global style for URLs, rather that the default one
+\makeatletter
+\def\url@leostyle{%
+  \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\small\bf\ttfamily}}}
+\makeatother
+\urlstyle{leo}
+
+% To make various LaTeX processors do the right thing with page size.
+\def\pprw{8.5in}
+\def\pprh{11in}
+\special{papersize=\pprw,\pprh}
+\setlength{\paperwidth}{\pprw}
+\setlength{\paperheight}{\pprh}
+\setlength{\pdfpagewidth}{\pprw}
+\setlength{\pdfpageheight}{\pprh}
+
+% Make sure hyperref comes last of your loaded packages, to give it a
+% fighting chance of not being over-written, since its job is to
+% redefine many LaTeX commands.
+\definecolor{linkColor}{RGB}{6,125,233}
+\hypersetup{%
+    pdftitle={document},
+    pdfauthor={},
+    pdfkeywords={},
+    bookmarksnumbered,
+    pdfstartview={FitH},
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=linkColor,
+    breaklinks=true,
+}
+
+% create a shortcut to typeset table headings
+% \newcommand\tabhead[1]{\small\textbf{#1}}
+
+% End of preamble. Here it comes the document.
+\begin{document}
+
+\title{Extending StackOverflow® Gamification Using Social Media}
+
+\numberofauthors{5}
+\author{%
+    \alignauthor{Arturo Reyes Lopez\\
+        \affaddr{University of Victoria}\\
+        \affaddr{Victoria, BC, Canada}\\
+        \email{areyeslo@uvic.ca}}\\
+    \alignauthor{Nitin Goyal\\
+        \affaddr{University of Victoria}\\
+        \affaddr{Victoria, BC, Canada}\\
+        \email{ngoyal@uvic.ca}}\\
+    \alignauthor{Richard B. Wagner\\
+        \affaddr{University of Victoria}\\
+        \affaddr{Victoria, BC, Canada}\\
+        \email{rbwagner@uvic.ca}}\\
+    \alignauthor{Tim Baker\\
+        \affaddr{University of Victoria}\\
+        \affaddr{Victoria, BC, Canada}\\
+        \email{timbaker@uvic.ca}}\\
+    \alignauthor{Alastair Beaumont\\
+        \affaddr{University of Victoria}\\
+        \affaddr{Victoria, BC, Canada}\\
+        \email{alastair@uvic.ca}}\\
+}
+
+\maketitle
+
+\begin{abstract}
+StackOverflow is a popular Q\&A community, with thousands of users solving and
+answering questions. SO community uses elements of badges and reputation to
+practice gamification. Our motivation for this project is to identify the
+effectiveness of gamification and how it can be improved further. This project
+will address the issues and recommendation from selected SO users to
+improve/extend gamification elements. First group of users will be selected
+from SO community based on reputation levels and the second group will be UVic
+StackOverflow users. There is a definite need of improving gamification in
+StackOverflow.
+\end{abstract}
+
+\keywords{Gamification, StackOverflow (SO)}
+
+\category{H.5.m.}{Information Interfaces and Presentation
+  (e.g. HCI)}{Miscellaneous} \category{See
+  \url{http://acm.org/about/class/1998/} for the full list of ACM
+  classifiers. This section is required.}{}{}
+
+\section{Introduction}
+In Social Media, the use of game design and game elements, well known as gamification, has sought to increase generation of content by the users. Badges, privileges and reputation are being used to recognize contributions of users on the sites and generally these elements seem to be valued by users who compete for the prize. Several studies have shown awareness of other participants and competence during the game experiences\cite{Rughinis}. Other studies have shown that gamification can increase engagement in activities that involve a community \cite{Marder}. However, the inclusion of gamification itself does not guaranty engagement or motivation and it depends on the rules to earn badges and privileges  according to the context\cite{Deterding}.
+StackOverflow is a popular Q\&A website for an ever-increasing range of computer programming topics. SO is likely to be the most popular website in the computer programming world with over 4,000,000 registered users \footnote{https://stackoverflow.com/users} and with more than 11,000,000 questions \footnote{https://stackoverflow.com/questions}. The website serves as a platform for users to both ask questions related to programming and to answer the questions of other users. These contributions by the users are the heart of the content and are met with reputation points and “badges” for the user. What we hope to uncover is whether this use of gamification is the primary motivating factor for the user’s collaboration and if so, is it possible to improve the current system in order to foster an increase in collaboration by users that wouldn’t normally contribute? 
+This research aims to examine the ways that collaboration, in the form of asking and answering questions and commenting on the questions, is achieved in SO and what changes can be made to encourage this kind of collaboration from more users and to promote an increase in contributions from users of all skill levels. 
+Throughout the course of this research, we will present an overview of relevant, related work, examine what the primary motivating factors are for user collaboration, discuss the merits and shortcomings of the current system, and provide our recommendations of how StackOverflow may be improved to encourage more active participation from a wider range of its users. 
+
+\section{Related work}
+StackOverflow has been heavily studied in recent years. The following papers
+are the most representative
+
+\subsection{StackOverflow and GitHub}
+
+Associations between Software Development and Crowdsourced Knowledge which
+successfully linked users from the two platforms and determined that “for
+active committers, asking questions on StackOverflow catalyzes committing on
+GitHub and similarly, for active committers, answering questions on
+StackOverflow catalyzes committing on GitHub.”
+
+\subsection{One-day flies on StackOverflow}
+
+Why the vast majority of StackOverflow users only posts once which found that
+“less active users” are more likely to not have questions answered, get
+negative feedback (or answers that can be interpreted that way), self-answer
+their own question and less likely to have questions not already answered.
+
+\subsection{Can Gamification Motivate Voluntary Contributions? The case of
+StackOverflow Q\&A Community}
+
+This research was focused on answering activity considering a dataset with 46,571 StackOverflow users. The analysis was focused on comparing the answering activity 7 days before getting the badge and 7 days after the awarding date. The results suggested a positive impact on increasing the number of answers due to badges. For example, those users increasing reputation when answering questions are more likely to answer more questions as a result of the gamification. The analysis was more focused on the behavior of members after receiving a badge. In general, the researches have shown that badges motivate the participation of the user. However, we argue that the inclusion of programming skills or technical proficiency to the current classification of badges besides sharing achievements on social media could boost the increase of participation in StackOverflow.
+
+\subsection{Does Gamification Work?}
+
+This research indicates that gamification provides positive effects, however,
+the effects are greatly dependent on the context in which the gamification is
+being implemented, as well as on the users using it. Most of the reviewed
+papers reviewed positive results for the same of the motivational affordances
+of the gamifications implementations studied.
+
+\subsection{Building Reputation in StackOverflow}
+
+ The authors analyzed the StackOverflow (SO) data from different perspectives to understand the dynamics of reputation building on SO. For example, how the topic area requires different skills or effort to the reputation seeker, the time during a day and week with fewer contributions and how the 10 fastest contributors built quickly their reputation. They found that a large number of questions are related to .NET technologies, OOP languages and web development. Therefore contributors with expertise in those topics will have greater chance building reputation quickly. A contributor should participate regularly and answer as many questions as possible. These actions will improve the contributor’s influence and chances of getting up-votes.
+
+
+\subsection{StackOverflow Badges and User Behavior: An Econometric Approach}
+
+An Econometric Approach: The authors included the different actions to increase reputation, such as editing posts, asking questions and answering questions. They discovered that the behavior changes according to the action to obtain the badge. For example, users earning a badge for editing tend to make more edits in the prior days to receiving a badge compared to days after. In addition, the users who receive a badge for asking questions are not motivated to earn more badges. The authors proposed anonymous questions feature to increase the rate of posted questions. However, a system of anonymous questions can decrease the level of quality and increase the number of questions. Throughout this research, we can validate the necessity to decrease requirements to ask questions in order to promote more collaboration and avoid pressure to contribute for the new members.
+
+
+\section{Research Methodology}
+To study the collaboration in StackOverflow through answering questions, qualitative research will allow us to address the human aspects such as motivation to increase the contributions on the community. On StackOverflow, the contributions are composed of questions and answers. However, this research is focused on maximizing the contributions on questions.To conduct this we proposes a more detailed classification in the elements of gamifications with the inclusion of sharing achievements on social media. Social media can act as an external factor to strengthen the current gamification. The next sections are dedicated to the research questions and study design to be followed.
+
+
+\subsection{Research Questions}
+
+\textbf{Is the publication of reputation and badges on social media a
+factor to promote more answers?}
+
+This question will explore the user reaction when sharing reputation and badges on social media such as Facebook, Twitter or Linked-in. We will study if this additional recognition can stimulate the contributions in the community.
+
+\textbf{How the current gamification used by StackOverflow needs to improve in order to meet the user requirements?}
+
+This question will provide us the possible dissatisfaction in the user experience related to gamification and find the possible improvements on current classification of badges. The result will involve a change on how the badges are being classified to more suitable classification including more detailed characteristics such as programming language.
+
+
+\textbf{How the users would like to include their reputation and badges
+on social media?}
+
+This question will provide us the vision about the specific information that the users would like to share on social media. In addition to the second question, users can provide recommendation on how they would like to export their achievements to other social media platforms and which information they would consider to be shareable.
+
+
+\subsection{Study Design}
+
+Our research design consisted of two phases namely Survey and Interviews. For both the phases our research included two group of users: Selected StackOverflow members categorised by reputation level and University of Victoria students from the CSCW class. For the first group, the SO members were retrieved from the data dump hosted \footnote{https://data.stackexchange.com/stackoverflow/query}by StackOverflow community. To send the surveys to the selected users we obtained the emails by extracting them from their GitHub account because the current field EmailHash in the data dump did not include the member’s email.Most the users that have SO account also has it linked with the GitHub account. A web crawler script was developed that mapped the users from SO to the GitHub accounts and returned us the email address for those users. After gathering the SO members emails, we realized that members with low-level reputation usually do not have a GitHub account related. As a result, the need of including insights from the users in the bottom level of reputation was important to be covered. The second group provided us the means of obtaining these insights of the users who  belong to low level reputation and  look on SO for questions. 
+
+The reputation level in SO follows an exponential distribution with a long tail as is shown \footnote{http://hewgill.com/\~greg/stackoverflow/stats.html}. As a result, we considered to fragment the reputation in intervals of exponential 10 (e.g. 0-9, 10-99, 100 - 999, 1,000 - 9,999 and 10,000 - infinite) and send bulk emails including the questionnaire to each group. In the second group, we assumed to obtain members mostly from the first reputation interval. 
+
+In the first phase, we sent a survey consisted of 13 questions to cover 4 paths to be studied in the survey: Period of time using SO and activities in the community, the motivation to contribute through answering questions, behaviour towards sharing reputation on Social Media and possible changes in badges classification.. In the second phase, unstructured interviews through Skype was applied to participants of the first group. In addition, we applied interviews to the second group in person. The insight of having two different phases provided us the opportunity to clarify some answers in the survey and asked to the interviewee some opinions about how they perceive SO as an inclusive community that promotes participation among all members regarding their reputation or experience.The survey application was sent to 551 participants distributed among all reputation levels and we obtained 72 responses.
+
+In the second phase, we carried out interviews based on the emails provided by the members who were interested in continuing on the research. The questionnaire for interviews provided us the opportunity to increase our understanding about preliminary results obtained by the surveys. Therefore, some questions were personalized according to the rank of the users in comparison with the answers provided by the same reputation levels and others. Overall, the interviews were held on Skype or face-to-face, they lasted between 25 to 30 minutes and  scheduled based on the availability of the interviewee. The interviewer asked for permission to record the interview while he was taking notes. In some cases, the interviewer had to add questions to explore deeper some answers or even discard some questions because the responses of the interview were in opposite direction. Table 1 shows the participation of members who received the invitation through email to answer the interview and the number of members who provided us the opportunity to have an interview.
+Last week we conducted most of the interviews and transcripted those to form the basis of the results that are discussed in the following section.
+
+\begin{center}
+    \begin{tabular}{ | p{1.6cm} | P{0.9cm} | P{1.8cm} | P{1.8cm} |}
+    \hline
+    \textbf{Reputation Level} & \textbf{Emails Sent} & \textbf{Participation Survey(\%)} & \textbf{Participation Interview} \\ \hline
+    0-9 & 43 & 2.3\% & 1 \\ \hline
+    10-99 & 69 & 13\% & 0 \\ \hline
+    100-999 & 144 & 13\% & 1 \\ \hline
+    1,000-999 & 146 & 17\% & 2 \\ \hline
+    10,000-inf. & 149 & 12\% & 1 \\ \hline
+  \end{tabular}
+  \bigskip
+   Table1.-Responses on surveys/interviews.
+\end{center}
+
+\section{Preliminary Results}
+
+The following section includes the results from the surveys and interviews based on the research questions. For each question we define the basis of its origin to support it.
+
+\textbf{RQ1. Is the publication of reputation and badges on social media a factor to promote more answers?}
+
+At the beginning of the exploratory study, we discussed that the inclusion of Social Media on SO would increase the participation or the motivation to contribute through sharing reputation or badges to a broader community. This social media sharing can even redirect to work-related community such as GitHub, Linkedin or Twitter which is heavily used by programmers. We unfolded this question into two perspectives: How the ability to share achievements on Social Media can affect the contributions,  which Social Media platforms would be preferable. Surprisingly, the SO members with the lowest reputation preferred to share their achievements on Social Media. On the other hand, the members with the highest reputation disagree with over 75\% on sharing their achievements on Social Media. Having the interviews, an user from the reputation level 1,000-9,999 provided us an interesting justification for not sharing in GitHub: “GitHub in my opinion is the only popular place where you can really show your skills, so answering your question, sharing StackOverflow badges on GitHub would do nothing” and not sharing in LinkedIn: “LinkedIn is in my opinion a place where headhunters live , not a place to share your achievements because you don’t find a soulmate who appreciate your achievement“. The members who agreed to share their achievements on Social Media preferred LinkedIn (91\%), Twitter (78\%) and Facebook (56\%). The answer to the question how your contribution will be affected if StackOverflow start to share your reputation and badges? confirm the interest of the lowest reputation level to increase their motivation (100\%). On the other side, the other reputations levels would be motivated only with 25\% in average of the the responses. Overall, we did not find enough evidence that Social Media can improve the current gamification. 
+
+\textbf{RQ2.How current gamification used by StackOverflow needs to improve in order to meet the user requirements?}
+
+We found based on the discussion with our team that the current gamification can be improved in the SO community.The badges and reputation currently provided by SO are static and non-exportable to resumes or personal websites. We took a pragmatic decision to include this question on the survey to identify if there is a definite need to improve the gamification elements in SO community and if it is then how can it be improved further. To study the current gamification in SO, we included three important research questions: what is the motivation to contribute, how much satisfaction is there with the current gamification and how the member would like to improve the current gamification. 
+From the analysis of the responses we found that the main motivations to contribute on SO can vary according to the reputation level of the member. For example, the lowest reputation level is more interested on increasing their knowledge through asking questions. The medium reputation levels are more appealing to contribute on SO when applying their experience while building reputation. On the other hand, the highest reputation level is more focused on applying experience while challenging themselves with unusual questions. One answer from an interview can clarify this aspect : “Only if the question is interesting and deep enough for me, I would consider answering it, if it is not interesting or deep enough for me, I am not saying I am a good programmer, it’s only my personal taste”
+Surprisingly, when asking about how satisfied are the members with the current gamification, the lower reputation levels are more satisfied than the higher reputation levels. For example, the lower levels(0-9,10-99) are satisfied with the current gamification. On the other hand, the higher  reputation levels (100-999, 1,000-9,9999 and more than 10,000) are dissatisfied with the current gamification. This results suggest that new users are attracted for the current use of badges and reputation while users with more experience are not completely convinced with the system. An answer from our interviews can provide us more insight about this phenomenon: “If a fresh person wants to start participating, asking, answering, then yes I agree that badges would play an important role in incentivize participation, ...when a newcomer would pay attention to those gamifications objects because he would know how StackOverflow works, he would know by that time that badges mean nothing”
+In overall, all reputation levels agreed with about 40\% responses to share reputation and badges on GitHub as a feature to increase the contributions in the community. In our interviews, we found the same relationship between SO and GitHub, but in the other way round: “sharing GitHub on StackOverflow would made, increase the incentive to motivation to answer or ask question if they see the GitHub profile”. Through the interviews we observed a sense of devalued reputation and value of badges in SO.
+
+\textbf{How the users would like to include their reputation and badges on social media?}
+
+As the part of preliminary analysis of the research question, we found evidence of people wanting to include their reputation and badges from SO to their Social Media pages \footnote{http://meta.stackexchange.com/questions/141300/how-can-i-share-my-stack-overflow-reputation-on-facebook}. Based on the discussion, we suggested few ways in which  the reputation and badges can be included/exported on Social media. Our suggestion came from a careful discussion based on the usability and functionality. We suggested to separate the badges on programming language as the current badges interface does not provide enough information about in which domain or technical proficiency it was awarded for.. The results shows that lower reputation users agree to include programming language classification in the badges while higher reputation user don’t. The higher reputation users seem to have more justifications about the unconformity of the current gamification. An interview provided us with  a better insight about this: “the process of earning reputation should be like exponentially difficult . If you get at the level A and then you answer twice many questions after level A, you wouldn’t get twice reputation than you got before level A, it should be exponentially difficult, the curve should not be flat.”. We can identify a necessity of changing the means by which assignment of  badges and reputation among the different reputation levels takes place.
+
+
+
+\section{Expected Results}
+
+After collecting all the data from our research we expect to have a better
+understanding of how gamification and social media affects StackOverflow and
+its users. To be more precise, we will look at how these game design elements
+such as badges and reputation points. We will be collecting data to make sure
+if the current gamification is working to prompt users to be more active and
+engaging. Based on our findings we will hope to add our own contributions
+which will improve this system. We will also be looking at how social media is
+impacting the user experience. Our expected contributions will be based on the
+data we collect and the answers to our research questions. We are looking to
+end this extensive study with concrete improvements to StackOverflow’s:
+gamification implementation, social media synergy and user interaction.
+
+
+
+\section{Conclusions and Future Work}
+
+After analyzing the results obtained from the survey and interviews, we are convinced on the need of improving current gamification elements not only in the badges interface, but more important on changing the mechanism how the badges and reputation are earned by the members. Further improvements to gamification in the kernel are needed before thinking on adding external features such as sharing badges on Social Media or adding more classification to the badges.There is a definite need from the creators of SO to make the community impartial and unbiased so that even new users (without reputation) can contribute.  
+
+
+% REFERENCES FORMAT
+% References must be the same font size as other body text.
+% \bibliographystyle{SIGCHI-Reference-Format}
+% \bibliography{document}
+
+\begin{thebibliography}{9}
+
+\bibitem{Antin}
+Antin, Judd, and Elizabeth F. Churchill. "Badges in social media: A social psychological perspective." CHI 2011 Gamification Workshop Proceedings (Vancouver, BC, Canada, 2011). 2011.
+
+\bibitem{Bosu}
+Bosu, Amiangshu, et al. "Building reputation in stackoverflow: an empirical investigation." Proceedings of the 10th Working Conference on Mining Software Repositories. IEEE Press, 2013.
+
+\bibitem{Caponetto}
+Caponetto, Ilaria, Jeffrey Earp, and Michela Ott. "Gamification and Education: A Literature Review." ECGBL2014-8th European Conference on Games Based Learning: ECGBL2014. Academic Conferences and Publishing International, 2014.
+
+\bibitem{Cavusoglu}
+Cavusoglu, Huseyin, Zhuolun Li, and Ke-Wei Huang. "Can Gamification Motivate Voluntary Contributions?: The Case of StackOverflow Q\&A Community." Proceedings of the 18th ACM Conference Companion on Computer Supported Cooperative Work \& Social Computing. ACM, 2015.
+
+\bibitem{Deterding}
+Deterding, Sebastian, et al. "Gamification. Using game-design elements in non-gaming contexts." CHI'11 Extended Abstracts on Human Factors in Computing Systems. ACM, 2011.
+
+\bibitem{Jin}
+Jin, Yong, et al. "Quick Trigger on Stack Overflow: A Study of Gamification-influenced Member Tendencies." (1916).
+
+\bibitem{Marder}
+Marder, Andrew. "Stack overflow badges and user behavior: an econometric approach." Proceedings of the 12th Working Conference on Mining Software Repositories. IEEE Press, 2015.
+
+\bibitem{McGonigal}
+McGonigal, Jane. Reality is broken: Why games make us better and how they can change the world. Penguin, 2011.
+
+\bibitem{Hägglund}
+Hägglund, Per. "Taking gamification to the next level." (2012).
+
+\bibitem{Hamari}
+Hamari, Juho, Jonna Koivisto, and Harri Sarsa. "Does gamification work?--a literature review of empirical studies on gamification." System Sciences (HICSS), 2014 47th Hawaii International Conference on. IEEE, 2014.
+
+\bibitem{Rughinis}
+Rughinis, Razvan. "Gamification for productive interaction: Reading and working with the gamification debate in education." Information Systems and Technologies (CISTI), 2013 8th Iberian Conference on. IEEE, 2013.
+
+\bibitem{Ryan}
+Ryan, Richard M., C. Scott Rigby, and Andrew Przybylski. "The motivational pull of video games: A self-determination theory approach." Motivation and emotion 30.4 (2006): 344-360.
+
+\bibitem{Slag}
+Slag, Rogier, Mike de Waard, and Alberto Bacchelli. "One-day flies on StackOverflow."
+
+\bibitem{Vasilescu}
+Vasilescu, Bogdan, Vladimir Filkov, and Alexander Serebrenik. "StackOverflow and GitHub: associations between software development and crowdsourced knowledge." Social Computing (SocialCom), 2013 International Conference on. IEEE, 2013.
+
+\bibitem{Wang}
+Wang, Shaowei, David Lo, and Lingxiao Jiang. "An empirical study on developer interactions in StackOverflow." Proceedings of the 28th Annual ACM Symposium on Applied Computing. ACM, 2013.
+
+
+\end{thebibliography}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
