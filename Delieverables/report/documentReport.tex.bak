@@ -119,8 +119,7 @@ effectiveness of gamification and how it can be improved further. This project
 will address the issues and recommendation from selected SO users to
 improve/extend gamification elements. First group of users will be selected
 from SO community based on reputation levels and the second group will be UVic
-StackOverflow users. There is a definite need of improving gamification in
-StackOverflow.
+StackOverflow users. There is an apparent need in SO community \footnote{http://meta.stackexchange.com/questions/141300/how-can-i-share-my-stack-overflow-reputation-on-facebook} of including Social media as an additional element in the current gamification in StackOverflow.
 \end{abstract}
 
 \keywords{Gamification, StackOverflow (SO)}
@@ -137,8 +136,7 @@ This research aims to examine the ways that collaboration, in the form of asking
 Throughout the course of this research, we will present an overview of relevant, related work, examine what the primary motivating factors are for user collaboration, discuss the merits and shortcomings of the current system, and provide our recommendations of how StackOverflow may be improved to encourage more active participation from a wider range of its users. 
 
 \section{Related work}
-StackOverflow has been heavily studied in recent years. The following papers
-are the most representative
+StackOverflow has been heavily studied in recent years. The following papers represent our research questions.
 
 \subsection{StackOverflow and GitHub}
 
@@ -179,34 +177,32 @@ An Econometric Approach: The authors included the different actions to increase 
 
 
 \section{Research Methodology}
-To study the collaboration in StackOverflow through answering questions, qualitative research will allow us to address the human aspects such as motivation to increase the contributions on the community. On StackOverflow, the contributions are composed of questions and answers. However, this research is focused on maximizing the contributions on questions.To conduct this we proposes a more detailed classification in the elements of gamifications with the inclusion of sharing achievements on social media. Social media can act as an external factor to strengthen the current gamification. The next sections are dedicated to the research questions and study design to be followed.
+To study the collaboration in StackOverflow through answering questions, qualitative research will allow us to address the human aspects such as motivation to increase the contributions on the community. On StackOverflow, the contributions are composed of questions and answers. However, this research is focused on maximizing the contributions on questions.To conduct this we propose a more detailed classification in the elements of gamification with the inclusion of sharing achievements on social media. Social media can act as an external factor to strengthen the current gamification. The next sections are dedicated to the research questions and study design to be followed.
 
 
 \subsection{Research Questions}
+\textbf{How the current gamification used by StackOverflow needs to improve in order to meet the user requirements?}
+
+This question will provide us the possible dissatisfaction in the user experience related to gamification and find the possible improvements on current classification of badges. The result will involve a change on how the badges are being classified to more suitable classification including more detailed characteristics such as programming language.
 
 \textbf{Is the publication of reputation and badges on social media a
 factor to promote more answers?}
 
 This question will explore the user reaction when sharing reputation and badges on social media such as Facebook, Twitter or Linked-in. We will study if this additional recognition can stimulate the contributions in the community.
 
-\textbf{How the current gamification used by StackOverflow needs to improve in order to meet the user requirements?}
-
-This question will provide us the possible dissatisfaction in the user experience related to gamification and find the possible improvements on current classification of badges. The result will involve a change on how the badges are being classified to more suitable classification including more detailed characteristics such as programming language.
-
-
 \textbf{How the users would like to include their reputation and badges
 on social media?}
 
-This question will provide us the vision about the specific information that the users would like to share on social media. In addition to the second question, users can provide recommendation on how they would like to export their achievements to other social media platforms and which information they would consider to be shareable.
+This question will provide us the vision about the specific information that the users would like to share on social media. The users can provide recommendation on how they would like to export their achievements to other social media platforms and which information they would consider to be shareable.
 
 
 \subsection{Study Design}
 
-Our research design consisted of two phases namely Survey and Interviews. For both the phases our research included two group of users: Selected StackOverflow members categorised by reputation level and University of Victoria students from the CSCW class. For the first group, the SO members were retrieved from the data dump hosted \footnote{https://data.stackexchange.com/stackoverflow/query}by StackOverflow community. To send the surveys to the selected users we obtained the emails by extracting them from their GitHub account because the current field EmailHash in the data dump did not include the member’s email.Most the users that have SO account also has it linked with the GitHub account. A web crawler script was developed that mapped the users from SO to the GitHub accounts and returned us the email address for those users. After gathering the SO members emails, we realized that members with low-level reputation usually do not have a GitHub account related. As a result, the need of including insights from the users in the bottom level of reputation was important to be covered. The second group provided us the means of obtaining these insights of the users who  belong to low level reputation and  look on SO for questions. 
+Our research design consisted of two phases namely Survey and Interviews. For both the phases, our research included two groups of users: Selected StackOverflow members classified by reputation level and University of Victoria (UVic) student population. The basic information of SO members were retrieved from the data dump hosted \footnote{https://data.stackexchange.com/stackoverflow/query}by StackOverflow. However, in the previous year SO has removed the email contact from the databases to protect member's privacy \footnote{http://meta.stackexchange.com/questions/221027/where-did-emailhash-go}.Therefore, we obtained the emails by extracting them from their GitHub account. Most the users that have SO account also has it linked with the GitHub account. A web crawler script was developed to map the users from SO and the GitHub accounts to retrieve the email address for those users. After gathering the SO members emails, we realized that members with low-level reputation usually do not have a GitHub account related. However, UVic student population provided us the means of obtaining the insights of the low-reputation-level users who look on SO for  answers related to predefined questions. 
 
-The reputation level in SO follows an exponential distribution with a long tail as is shown \footnote{http://hewgill.com/\~greg/stackoverflow/stats.html}. As a result, we considered to fragment the reputation in intervals of exponential 10 (e.g. 0-9, 10-99, 100 - 999, 1,000 - 9,999 and 10,000 - infinite) and send bulk emails including the questionnaire to each group. In the second group, we assumed to obtain members mostly from the first reputation interval. 
+The reputation level in SO follows an exponential distribution with a long tail as is shown \footnote{http://hewgill.com/\~greg/stackoverflow/stats.html}. As a result, we considered to fragment the reputation in intervals of exponential 10 (e.g. 0-9, 10-99, 100 - 999, 1,000 - 9,999 and 10,000 - infinite) and send bulk emails including the questionnaire to each group. In the UVic student population, we assume to obtain members mostly from the first reputation interval. 
 
-In the first phase, we sent a survey consisted of 13 questions to cover 4 paths to be studied in the survey: Period of time using SO and activities in the community, the motivation to contribute through answering questions, behaviour towards sharing reputation on Social Media and possible changes in badges classification.. In the second phase, unstructured interviews through Skype was applied to participants of the first group. In addition, we applied interviews to the second group in person. The insight of having two different phases provided us the opportunity to clarify some answers in the survey and asked to the interviewee some opinions about how they perceive SO as an inclusive community that promotes participation among all members regarding their reputation or experience.The survey application was sent to 551 participants distributed among all reputation levels and we obtained 72 responses.
+In the first phase, we sent a survey consisted of 13 questions to cover 4 features to be studied in the survey: Period of time using SO and activities in the community, the motivation to contribute through answering questions, behaviour towards sharing reputation on Social Media and possible changes in badges classification. In the second phase, interviews were included to complement the research and overcome the limitations of surveys. The unstructured interviews through Skype complemented the were applied to SO members. In addition, we applied interviews to UVic student population in person. The insight of having two different phases provided us the opportunity to clarify some answers in the survey and asked to the interviewee some opinions about how they perceive SO as an inclusive community that promotes participation among all members regarding their reputation or experience.The survey application was sent to 551 participants distributed among all reputation levels and we obtained 72 responses.
 
 In the second phase, we carried out interviews based on the emails provided by the members who were interested in continuing on the research. The questionnaire for interviews provided us the opportunity to increase our understanding about preliminary results obtained by the surveys. Therefore, some questions were personalized according to the rank of the users in comparison with the answers provided by the same reputation levels and others. Overall, the interviews were held on Skype or face-to-face, they lasted between 25 to 30 minutes and  scheduled based on the availability of the interviewee. The interviewer asked for permission to record the interview while he was taking notes. In some cases, the interviewer had to add questions to explore deeper some answers or even discard some questions because the responses of the interview were in opposite direction. Table 1 shows the participation of members who received the invitation through email to answer the interview and the number of members who provided us the opportunity to have an interview.
 Last week we conducted most of the interviews and transcripted those to form the basis of the results that are discussed in the following section.
