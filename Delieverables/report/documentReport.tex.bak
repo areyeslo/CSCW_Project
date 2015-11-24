@@ -205,7 +205,7 @@ The reputation level in SO follows an exponential distribution with a long tail 
 In the first phase, we sent a survey by email consisting of 13 questions to cover 4 features to be studied in the survey: Period of time using SO and activities in the community, the motivation to contribute through answering questions, behaviour towards sharing reputation on social media and possible changes in badges classification. In the email, we attach the consent form explaining the characteristics of the research and rights of participants involved. In the second phase, interviews were included to complement the qualitative research and overcome the limitations of general answers in the surveys. We carried out interviews based on the emails provided by the members, who were interested in continued participation with the research, when answering the surveys. The questionnaire for interviews provided us the opportunity to increase our understanding about preliminary results obtained by the surveys. Therefore, some questions were personalized according to the reputation level of the user to be interviewed. For SO members, the interviews were held on Skype and face-to-face for UVic student population, the interviews lasted between 30 to 40 minutes and  scheduled based on the availability of the interviewee. The interviewer asked for permission to record the interview while he was taking notes. In some cases, the interviewer had to change initial questions according to the answers of the interviewee.
 
 
-The insight of having two different phases provided us the opportunity to clarify some behaviour presented in the answers when analysing the survey. The survey application was sent to 583 participants in total distributed among all reputation levels and we obtained 86 responses (14.75\%)  for survey and 5 members (0.85\%) willing to held an interview. Table 1 shows the participation of members classified by reputation level who received the invitation through email to participate in the interview and the number of members who provided us the opportunity to be interviewed.
+The insight of having two different phases provided us the opportunity to clarify some behaviour presented in the answers when analysing the survey. The survey application was sent to 583 participants in total distributed among all reputation levels and we obtained 86 responses (14.75\%)  for survey and 5 members (0.85\%) were willing to held an interview. Table 1 shows the participation of members classified by reputation level who received the invitation through email to participate in the interview and the number of members who provided us the opportunity to be interviewed.
 
 \begin{center}
     \begin{tabular}{ | p{1.6cm} | P{0.9cm} | P{1.8cm} | P{1.8cm} |}
@@ -289,7 +289,7 @@ Deterding, Sebastian, et al. "Gamification. Using game-design elements in non-ga
 Easterbrook, Steve, et al. "Selecting empirical methods for software engineering research." Guide to advanced empirical software engineering. Springer London, 2008. 285-311.
 
 \bibitem{Jin}
-Jin, Yong, et al. "Quick Trigger on Stack Overflow: A Study of Gamification-influenced Member Tendencies." (1916).
+Jin, Yong, et al. "Quick Trigger on Stack Overflow: A Study of Gamification-influenced Member Tendencies." , 1916.
 
 \bibitem{Marder}
 Marder, Andrew. "Stack overflow badges and user behavior: an econometric approach." Proceedings of the 12th Working Conference on Mining Software Repositories. IEEE Press, 2015.
@@ -298,7 +298,7 @@ Marder, Andrew. "Stack overflow badges and user behavior: an econometric approac
 McGonigal, Jane. "Reality is broken: Why games make us better and how they can change the world." Penguin, 2011.
 
 \bibitem{Hägglund}
-Hägglund, Per. "Taking gamification to the next level." (2012).
+Hägglund, Per. "Taking gamification to the next level.", 2012.
 
 \bibitem{Hamari}
 Hamari, Juho, Jonna Koivisto, and Harri Sarsa. "Does gamification work?--a literature review of empirical studies on gamification." System Sciences (HICSS), 2014 47th Hawaii International Conference on. IEEE, 2014.
