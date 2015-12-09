@@ -1,14 +1,71 @@
-% Scooter Morris, July 30, 2014.
-% updated to add DOI text to copyright footer
-% chi & iui 2012 cls
-% Jean-Daniel Fekete, August 28, 2011.
-% llt: re-added flushleft in \terms & \category, added compatibility for the caption package
+% CHI Proceedings Template.
+%
+% FILENAME: sigchi.cls
+%  
+% SOURCE: See https://github.com/sigchi for latest official version.
+%
+% NOTE: If you wish to edit this document, please list edits properly
+% in the CHANGELOG section and not scattered through the code.
+% 
+% CHANGELOG: 
+%
+% 2015-03-21 David A. Shamma Updating for new format and Github
+% repo for CHI 2016.
+%
+% 2014-07-30 Scooter Morris Updated to add DOI text to copyright
+% footer
+%
+% 2011-10-19 DanCo Added \sloppy to reduce overfull lines per Sheridan
+%
+% 2011-08-28 Jean-Daniel Fekete Re-added flushleft in \terms &
+% \category, added compatibility for the caption package
+%
+% 2006 Andrew Duchowski Updated the metafont names to use more
+% modern Berry font naming schemes.
+%
+% 2002-07-30 JS/GM Fix to vertical spacing before Proofs
+%
+% 2002-07-29 Georgia Fixed bug in sub-sub-section numbering in
+% paragraphs
+%
+% 1999-09-11 Gerry Murry Allowance Made to switch default fonts
+% between those systems using METAFONT and those using 'Type 1' or
+% 'Truetype' fonts.  See LINE NUMBER 266 for details.  Also provided
+% for enumerated/annotated Corollaries 'surrounded' by enumerated
+% Theorems (line 838).
+%
+% Modified from ACM_PROC_ARTICLE-SP DOCUMENT STYLE by G.K.M. Tobin
+% August-October 1999.  Adapted from ARTICLE document style by Ken
+% Traub, Olin Shivers also using elements of esub2acm.cls.  Modified
+% from ARTICLE DOCUMENT STYLE -- Released 16 March 1988 for LaTeX
+% version 2.09 by Leslie Lamport, 16 March 1988.
+% 
+% MISC: 
+%
+% Fixed the format to match the Word template and added a \teaser
+% command to add a teaser image.
+%
+% Made the Permission Statement / Conference Info / Copyright Info
+% 'user definable' in the source .tex file OR automatic if not
+% specified.  This 'sp' version does NOT produce the permission block.
+%
+% Major change in January 2000 was to include a "blank line" in
+% between new paragraphs. This involved major changes to the, then,
+% acmproc-sp.cls 1.0SP file, precipitating a 'new' name:
+% "acm_proc_article-sp.cls" V2.01SP.  Footnotes inside table cells
+% using \minipage (Oct. 2002)
+%
+% LICENSE: Public domain: You are free to do whatever you want with
+% this template.  If you improve this in any way, please submit a
+% pull request to the Github repository.
 %
 % ---- Start of example  ----
 %
 % \documentclass{sigchi}
 % \usepackage{times}
-% \pagenumbering{arabic}  % Arabic page numbers for submission.  Remove this line to eliminate page numbers for the camera ready copy
+% \pagenumbering{arabic} % Arabic page numbers for submission.  
+%                        % Remove this line to eliminate page numbers  
+%                        % for the camera ready copy
 % \title{The Title}
 % \numberofauthors{2}
 % \author{
@@ -33,54 +90,15 @@
 %
 % ---- End of example  ----
 %
-% ---- Start of 'updates'  ----
-%
-% Fixed the format to match the Word template and added a \teaser
-% command to add a teaser image.
-%
-% Allowance made to switch default fonts between those systems using
-% METAFONT and those using 'Type 1' or 'Truetype' fonts.
-% See LINE NUMBER 266 for details.
-% Also provided for enumerated/annotated Corollaries 'surrounded' by
-% enumerated Theorems (line 838).
-% Gerry November 11th. 1999
-% Updated the metafont names to use more modern Berry font naming schemes.
-% Andrew Duchowski.  2006
-%
-% Made the Permission Statement / Conference Info / Copyright Info
-% 'user definable' in the source .tex file OR automatic if
-% not specified.
-% This 'sp' version does NOT produce the permission block.
-%
-% Major change in January 2000 was to include a "blank line" in between
-% new paragraphs. This involved major changes to the, then, acmproc-sp.cls  1.0SP
-% file, precipitating a 'new' name: "acm_proc_article-sp.cls" V2.01SP.
-%
-% Georgia fixed bug in sub-sub-section numbering in paragraphs (July 29th. 2002)
-% JS/GM fix to vertical spacing before Proofs (July 30th. 2002)
-%
-% Footnotes inside table cells using \minipage (Oct. 2002)
-%
-% ---- End of 'updates' ----
-%
-\def\fileversion{V0.19}            % [sm] for ACM's tracking purposes 
-\def\filedate{July, 30, 2014}    % [sm] tracking data
-\def\docdate {Wednesday, July 30th 2014} % [sm] 
+% For the ACM Tracking Purposes
+\def\fileversion{V0.20}
+\def\filedate{March 21, 2015}
+\def\docdate {\filedate}
+% Packages
 \usepackage{epsfig}
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{amsfonts}
-%
-% ACM_PROC_ARTICLE-SP  DOCUMENT STYLE
-% G.K.M. Tobin August-October 1999
-%    adapted from ARTICLE document style by Ken Traub, Olin Shivers
-%    also using elements of esub2acm.cls
-% LATEST REVISION V2.6SP - OCTOBER 2002
-% ARTICLE DOCUMENT STYLE -- Released 16 March 1988
-%    for LaTeX version 2.09
-% Copyright (C) 1988 by Leslie Lamport
-%
-%
 %%% ACM_PROC_ARTICLE-SP is a document style for producing two-column camera-ready pages for
 %%% ACM conferences, according to ACM specifications.  The main features of
 %%% this style are:
@@ -129,18 +147,38 @@
 %%%     dvips -e 0 foo.dvi >foo.ps
 %%%
 
-\typeout{Document Class sigchi' <July 30, 2014>. Updated for chi 2014
-  based on chi2012.cls by William Hudson and Jean-Daniel Fekete.} % DLC
-\typeout{Document Class `chi2011' <October 19, 2010>. Tweaked by Manas Tungare.} % DLC
-\typeout{Shamelessly copied from}
-\typeout{`chiproceedings' <7th Sep. '00>. Modified by Jan O. Borchers}        % DLC
-\typeout{`acm_proc_article-sp' <2nd. October '02>.  Modified by G.K.M. Tobin} % DLC
-\typeout{`acmconf' <22 May 89>. Hacked 4/91 by shivers@cs.cmu.edu, 4/93 by theobald@cs.mcgill.ca}
-\typeout{Excerpts were taken from (Journal Style) 'esub2acm.cls'.}
-% \typeout{****** Bugs/comments/suggestions to Manas Tungare -- manas@tungare.name ******} %DLC
+\typeout{}
 
-\oddsidemargin 1.9cm            % [jdf] stick to CHI Formating Guidelines
-\evensidemargin 1.9cm           % [jdf] idem
+\typeout{Document Class SIGCHI}
+
+\typeout{Available at https://github.com/sigchi.}
+
+\typeout{}
+
+\typeout{- <March 21, 2105> Updated by David A. Shamma for CHI 2016.}
+
+\typeout{- <July 30, 2014> Updated for for 2014 by William Hudson and
+  Jean-Daniel Fekete.}
+
+\typeout{- <October 19, 2010> Updated for 2011 by Manas Tungare.}
+
+\typeout{Shamelessly copied from}
+
+\typeout{- <September 7, 2000> Modified by Jan O. Borchers from
+  `chiproceedings'}
+
+\typeout{- <October 2, 2002> Modified by G.K.M. Tobin from
+  `acm_proc_article-sp'}
+
+\typeout{- <May 22, 1989> Hacked from `acmconf' 4/91 by
+  shivers@cs.cmu.edu, 4/93 by theobald@cs.mcgill.ca}
+
+\typeout{Excerpts were taken from (Journal Style) 'esub2acm.cls'.}
+
+\typeout{}
+
+\oddsidemargin 1.9025cm            % [jdf] stick to CHI Formating Guidelines
+\evensidemargin 1.9025cm           % [jdf] idem
 \advance\oddsidemargin by -1in  % Correct for LaTeX gratuitousness
 \advance\evensidemargin by -1in % Correct for LaTeX gratuitousness
 \marginparwidth 0pt             % Margin pars are not allowed.
@@ -220,7 +258,7 @@
 %\partopsep 2pt plus 1pt minus 1pt% Extra vertical space, in addition to
                                  % \parskip and \topsep, added when user
                                  % leaves blank line before environment.
-\partopsep 0pt                                                              % 00-09-07 job
+\partopsep 0pt                   % 00-09-07 job
 
 \doublehyphendemerits=9999        % No consecutive line hyphens
 \brokenpenalty=9999               % No broken words across pages
@@ -417,7 +455,7 @@
 \newcount\sectioncntr
 \global\sectioncntr=1
 
-\setcounter{secnumdepth}{3}
+\setcounter{secnumdepth}{0}
 
 \def\appendix{\par
 \section*{APPENDIX}
@@ -621,7 +659,7 @@
 \def\ext@figure{lof}
 \def\fnum@figure{Figure \thefigure}
 \def\figure{\@float{figure}}
-\let\endfigure\end@float
+\def\endfigure{\end@float}
 \@namedef{figure*}{\@dblfloat{figure}}
 \@namedef{endfigure*}{\end@dblfloat}
 
@@ -632,7 +670,7 @@
 \def\ext@table{lot}
 \def\fnum@table{Table \thetable}
 \def\table{\@float{table}}
-\let\endtable\end@float
+\def\endtable{\end@float}
 \@namedef{table*}{\@dblfloat{table}}
 \@namedef{endtable*}{\end@dblfloat}
 
@@ -664,23 +702,10 @@
                    % which meant that the copyright space wasn't reserved.
                    % I re-enabled it.
 
-%% CHANGES ON NEXT LINES
-\newif\if@ll % to record which version of LaTeX is in use
-
-\expandafter\ifx\csname LaTeXe\endcsname\relax % LaTeX2.09 is used
-\else% LaTeX2e is used, so set ll to true
-\global\@lltrue
-\fi
-
-\if@ll
+% actual class setup happens here:
   \NeedsTeXFormat{LaTeX2e}
   \ProvidesClass{sigchi} [2011/06/06 - V0.16]  % DLC
   \RequirePackage{latexsym}% QUERY: are these two really needed?
-  \let\dooptions\ProcessOptions
-\else
-  \let\dooptions\@options
-\fi
-%% END CHANGES
 
 \def\@height{height}
 \def\@width{width}
@@ -696,16 +721,13 @@
 \@twosidetrue
 \@mparswitchtrue
 \def\ds@draft{\overfullrule 5\p@}
-%% CHANGE ON NEXT LINE
-\dooptions
 
 \lineskip \p@
 \normallineskip \p@
 \def\baselinestretch{1}
 \def\@ptsize{0} %needed for amssymbols.sty
 
-%% CHANGES ON NEXT LINES
-\if@ll% allow use of old-style font change commands in LaTeX2e
+% allow use of old-style font change commands in LaTeX2e
 \@maxdepth\maxdepth
 %
 \DeclareOldFontCommand{\rm}{\ninept\rmfamily}{\mathrm}
@@ -717,9 +739,7 @@
 \DeclareOldFontCommand{\sc}{\normalfont\scshape}{\@nomath\sc}
 \DeclareRobustCommand*{\cal}{\@fontswitch{\relax}{\mathcal}}
 \DeclareRobustCommand*{\mit}{\@fontswitch{\relax}{\mathnormal}}
-\fi
-%
-\if@ll
+
  \renewcommand{\rmdefault}{cmr}  % was 'ttm'
 % Note! I have also found 'mvr' to work ESPECIALLY well.
 % Gerry - October 1999
@@ -736,18 +756,7 @@
     \belowdisplayshortskip 6\p@ \@minus 3\p@
     \let\@listi\@listI
   }
-\else
-  \def\@normalsize{%changed next to 9 from 10
-%    \@setsize\normalsize{9\p@}\ixpt\@ixpt
-    \@setsize\normalsize{10\p@}\ixpt\@xpt        % from 9 to 10 00-09-07 job
-    \abovedisplayskip 6\p@ \@plus2\p@ \@minus\p@
-    \belowdisplayskip \abovedisplayskip
-    \abovedisplayshortskip 6\p@ \@minus 3\p@
-    \belowdisplayshortskip 6\p@ \@minus 3\p@
-    \let\@listi\@listI
-  }%
-\fi
-\if@ll
+
   \newcommand\scriptsize{\@setfontsize\scriptsize\@viipt{8\p@}}
   \newcommand\tiny{\@setfontsize\tiny\@vpt{6\p@}}
   \newcommand\large{\@setfontsize\large\@xiipt{14\p@}}
@@ -755,15 +764,7 @@
   \newcommand\LARGE{\@setfontsize\LARGE\@xviipt{20\p@}}
   \newcommand\huge{\@setfontsize\huge\@xxpt{25\p@}}
   \newcommand\Huge{\@setfontsize\Huge\@xxvpt{30\p@}}
-\else
-  \def\scriptsize{\@setsize\scriptsize{8\p@}\viipt\@viipt}
-  \def\tiny{\@setsize\tiny{6\p@}\vpt\@vpt}
-  \def\large{\@setsize\large{14\p@}\xiipt\@xiipt}
-  \def\Large{\@setsize\Large{18\p@}\xivpt\@xivpt}
-  \def\LARGE{\@setsize\LARGE{20\p@}\xviipt\@xviipt}
-  \def\huge{\@setsize\huge{25\p@}\xxpt\@xxpt}
-  \def\Huge{\@setsize\Huge{30\p@}\xxvpt\@xxvpt}
-\fi
+
 \normalsize
 
 % make aubox hsize/number of authors up to 3, less gutter
@@ -771,8 +772,8 @@
 %\newbox\@acmtitlebox % [jdf] no use of the box
 \def\@maketitle{\newpage
  \null
-% \setbox\@acmtitlebox\vbox{   % [jdf] box not used
-%\baselineskip 20pt            % [jdf] no skip
+%\setbox\@acmtitlebox\vbox{   % [jdf] box not used
+\baselineskip 20pt            % [jdf] no skip
   \vskip 1em                   % [jdf] removed Vertical space above title.
    \begin{center}
     {\ttlfnt \@title\par}       % Title set in 18pt Helvetica (Arial) bold size.
@@ -947,8 +948,18 @@
 \def\conferenceinfo#1#2{\global\conf={#1}\global\confinfo{#2}}
 
 
-\def\marginpar{\@latexerr{The \marginpar command is not allowed in the
+% Introduce a "chi_draft" option which conditionally enables marginpars with a warning.
+\let\oldmarginpar\marginpar
+\renewcommand{\marginpar}[2][]{\@latexerr{The marginpar command is not allowed in the
   `acmconf' document style.}\@eha}
+\DeclareOption{chi_draft}{
+  \marginparwidth 40pt
+  \renewcommand{\marginpar}[2][]{\@latex@warning{The marginpar command is not allowed in the `acmconf'
+  document style. Remove all occurences before final document submission.}\oldmarginpar[#1]{#2}}
+}
+% Immediately execute the options at this point. Reason is discussed
+% here: https://tex.stackexchange.com/questions/203387/
+\ProcessOptions
 
 \mark{{}{}}     % Initializes TeX's marks
 
@@ -1084,8 +1095,6 @@
 %% NOTE: OK to use old-style font commands below, since they were
 %% suitably redefined for LaTeX2e
 %% END CHANGES
-%\setcounter{secnumdepth}{3}
-\setcounter{secnumdepth}{-2} % DLC
 \def\part{%
     \@startsection{part}{9}{\z@}{-10\p@ \@plus -4\p@ \@minus -2\p@}
         {4\p@}{\normalsize\@ucheadtrue}%
@@ -1159,13 +1168,14 @@
   \else
     \def\@svsechd{#4{\hskip #1\relax #5}}%
   \fi
+  \par\nobreak
   \vskip -6pt  % [jdf] less space between section as in the Word template
   \@xsect{#3}\parskip=6pt} % [jdf] paragraph skip shorter
 
 
 \def\@sect#1#2#3#4#5#6[#7]#8{%
     \ifnum #2>\c@secnumdepth
-        \let\@svsec\@empty
+        \let\@svsec\@\refstepcounter{#1}
     \else
         \refstepcounter{#1}%
         \edef\@svsec{%
@@ -1194,6 +1204,7 @@
             \endgroup
         \endgroup
         \csname #1mark\endcsname{#7}%
+        \par\nobreak
         \vskip -6pt  % [jdf] less space between section as in the Word template
       \addcontentsline{toc}{#1}{%
             \ifnum #2>\c@secnumdepth \else
@@ -1396,7 +1407,7 @@
 \setcounter{enumi}{1}
 \def\thebibliography#1{%
     \section{%
-       {REFERENCES}
+       {References}
         \@mkboth{{\refname}}{{\refname}}%
     }%
 %    \list{[\arabic{enumi}]}{%
@@ -1532,7 +1543,43 @@ This text field is large enough to hold the appropriate release statement assumi
 }
 \clubpenalty=10000 
 \widowpenalty = 10000
-% End of sigchi.cls - version 0.01	
+
+%% 
+% For the CCSXML 2012 Categories
+
+\let\@concepts\@empty
+% Support for CCSXML file
+\RequirePackage{comment}
+\excludecomment{CCSXML}
+
+% New concepts scheme
+%
+% The first argument is the significance, the
+% second is the concept(s)
+%
+\newcommand\ccsdesc[2][100]{%
+  \ccsdesc@parse#1~#2~}
+%
+% The parser of the expression Significance~General~Specific
+%
+\def\ccsdesc@parse#1~#2~#3~{%
+  \expandafter\ifx\csname CCS@#2\endcsname\relax
+    \expandafter\gdef\csname CCS@#2\endcsname{\textbullet\textbf{#2} $\to$ }%
+  \g@addto@macro{\@concepts}{\csname CCS@#2\endcsname}\fi
+  \expandafter\g@addto@macro\expandafter{\csname CCS@#2\endcsname}{%
+    \ifnum#1>499\textbf{#3; }\else
+    \ifnum#1>299\textit{#3; }\else
+    #3; \fi\fi}}
+
+\newcommand\printccsdesc{%
+  \ifx\@concepts\@empty\else
+  \if@twocolumn
+    \section*{CCS Concepts}
+    \@concepts
+    \else \small
+    \quotation{\@concepts}%
+    \fi
+    \fi}
 
 
 %% DanCo, 10/19/11: Added this to reduce overfull lines per Sheridan
@@ -1546,8 +1593,3 @@ This text field is large enough to hold the appropriate release statement assumi
 %% http://www.economics.utoronto.ca/osborne/latex/PMAKEUP.HTM
 
 \sloppy
-
-%%% Local Variables: 
-%%% mode: latex
-%%% TeX-master: "survey"
-%%% End: 

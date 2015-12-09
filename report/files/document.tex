@@ -17,39 +17,49 @@
 
 % Arabic page numbers for submission.  Remove this line to eliminate
 % page numbers for the camera ready copy
-
-%\pagenumbering{arabic}
+% \pagenumbering{arabic}
 
 % Load basic packages
-\usepackage{verbatim}
 \usepackage{balance}  % to better equalize the last page
-\usepackage{graphics} % for EPS, load graphicx instead
-%\usepackage[T1]{fontenc}
+\usepackage{graphics} % for EPS, load graphicx instead 
+\usepackage[T1]{fontenc}
 \usepackage{txfonts}
-\usepackage{times}    % comment if you want LaTeX's default font
+\usepackage{mathptmx}
 \usepackage[pdftex]{hyperref}
-% \usepackage{url}      % llt: nicely formatted URLs
 \usepackage{color}
-\usepackage{textcomp}
 \usepackage{booktabs}
-\usepackage{ccicons}
+\usepackage{textcomp}
+% Some optional stuff you might like/need.
+\usepackage{microtype} % Improved Tracking and Kerning
+% \usepackage[all]{hypcap}  % Fixes bug in hyperref caption linking
+\usepackage{ccicons}  % Cite your images correctly!
+% \usepackage[utf8]{inputenc} % for a UTF8 editor only
+
+% If you want to use todo notes, marginpars etc. during creation of your draft document, you
+% have to enable the "chi_draft" option for the document class. To do this, change the very first
+% line to: "\documentclass[chi_draft]{sigchi}". You can then place todo notes by using the "\todo{...}"
+% command. Make sure to disable the draft option again before submitting your final document.
 \usepackage{todonotes}
-\usepackage{footnote}
-\usepackage{mathptmx,helvet,courier}  \usepackage{array}
-\usepackage{ragged2e}
-\usepackage{tabularx,ragged2e,booktabs,caption}
-% \usepackage{csquotes}
-% \SetBlockEnvironment{quotation}% I've only added this
-\newcolumntype{C}[1]{>{\Centering}m{#1}}
-\renewcommand\tabularxcolumn[1]{C{#1}}
-\usepackage{tablefootnote}
-\usepackage{array}
-\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
-\pagenumbering{arabic}
+
+% Paper metadata (use plain text, for PDF inclusion and later
+% re-using, if desired).  Use \emtpyauthor when submitting for review
+% so you remain anonymous.
+\def\plaintitle{SIGCHI Conference Proceedings Format}
+\def\plainauthor{First Author, Second Author, Third Author,
+  Fourth Author, Fifth Author, Sixth Author}
+\def\emptyauthor{}
+\def\plainkeywords{Authors' choice; of terms; separated; by
+  semicolons; include commas, within terms only; required.}
+\def\plaingeneralterms{Documentation, Standardization}
+
 % llt: Define a global style for URLs, rather that the default one
 \makeatletter
 \def\url@leostyle{%
-  \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\small\bf\ttfamily}}}
+  \@ifundefined{selectfont}{
+    \def\UrlFont{\sf}
+  }{
+    \def\UrlFont{\small\bf\ttfamily}
+  }}
 \makeatother
 \urlstyle{leo}
 
@@ -67,18 +77,24 @@
 % redefine many LaTeX commands.
 \definecolor{linkColor}{RGB}{6,125,233}
 \hypersetup{%
-    pdftitle={document},
-    pdfauthor={},
-    pdfkeywords={},
-    bookmarksnumbered,
-    pdfstartview={FitH},
-    colorlinks,
-    citecolor=black,
-    filecolor=black,
-    linkcolor=black,
-    urlcolor=linkColor,
-    breaklinks=true,
+  pdftitle={\plaintitle},
+% Use \plainauthor for final version.
+%  pdfauthor={\plainauthor},
+  pdfauthor={\emptyauthor},
+  pdfkeywords={\plainkeywords},
+  bookmarksnumbered,
+  pdfstartview={FitH},
+  colorlinks,
+  citecolor=black,
+  filecolor=black,
+  linkcolor=black,
+  urlcolor=linkColor,
+  breaklinks=true,
+  hypertexnames=false
 }
+
+% Load extra packages
+%\usepackage{tabularx,ragged2e,booktabs,caption}
 
 % create a shortcut to typeset table headings
 % \newcommand\tabhead[1]{\small\textbf{#1}}
@@ -122,8 +138,6 @@
 \keywords{Gamification, StackOverflow (SO)}
 
 \category{H.5.m.}{Information Interfaces and Presentation (e.g. HCI)}{Miscellaneous}
-
-\pagebreak
 
 \section{Introduction}
 In Social Media, the use of game design and game elements, known as gamification, is used to increase the quality and quantity of user generated content. Badges, privileges and reputation are being used to recognize contributions of users on the sites and generally these elements seem to be valued by users who compete for some form of reward whether it be direct financial reward, the building of reputation, the recognition of skills, etc. Several studies have shown awareness of other participants and competence during the game experiences\cite{Rughinis}. Other studies have shown that gamification can increase engagement in activities that involve a community \cite{Marder}. However, the inclusion of gamification itself does not guarantee an increase in engagement or motivation. Its effectiveness depends on the rules dictating the aquasition of badges and privileges according to the context \cite{Deterding}.
@@ -181,7 +195,7 @@ The insight of having three different phases provided us the opportunity to clar
 
 \begin{table}
 	\centering
-	\begin{tabular}{ p{1.0cm} p{1.6cm} P{0.9cm} P{1.8cm} P{1.4cm} }
+	\begin{tabular}{ p{1.0cm} p{1.6cm} p{0.9cm} p{1.8cm} p{1.4cm} }
 	\toprule
 	\textbf{Group ID} & \textbf{Reputation Level} & \textbf{Emails Sent} & \textbf{Survey Participation(\%)} & \textbf{Interview Participation } \\
 	\midrule
@@ -237,14 +251,14 @@ Through the interview with G4P1 we observed a sense of devalued reputation and v
 
 \textbf{RQ2. Is the publication of reputation and badges on social media a factor to promote more answers?}
 
+At the beginning of the exploratory study, we discussed that the inclusion of Social Media on SO would increase the participation or the motivation to contribute through sharing reputation or badges to a broader community. This social media sharing aspect could even be repurposed to the work-related community such as GitHub, Linkedin or Twitter. We unfolded this question into two perspectives: How can the ability to share achievements on Social Media can affect the contributions and which Social Media platforms would be preferred by the users of said sites.
+
 \begin{figure}
 	\centering
 	\includegraphics[width=0.9\columnwidth]{figures/boxplot_reputation_compare_publish_reputation_bool}
 	%\caption{Description}~\label{fig:figure1}
 	%TODO Format graphic caption
 \end{figure}
-
-At the beginning of the exploratory study, we discussed that the inclusion of Social Media on SO would increase the participation or the motivation to contribute through sharing reputation or badges to a broader community. This social media sharing aspect could even be repurposed to the work-related community such as GitHub, Linkedin or Twitter. We unfolded this question into two perspectives: How can the ability to share achievements on Social Media can affect the contributions and which Social Media platforms would be preferred by the users of said sites.
 
 Figure 1 illustrates a general trend that was found in the surveys and the interviews where more acclimated users didn't find value in self reported motivation from the badges. On the other hand, less acclimated users (generally with lower reputation) were slightly more likely to find value in the badges.
 
