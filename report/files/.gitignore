@@ -2,3 +2,7 @@
 *.out
 *.aux
 *.pdf
+*.gz
+*.bbl
+*.blg
+build/
